@@ -1,0 +1,24 @@
+footer ul li a {
+  font-size: 0.7rem;
+  display: inline-block;
+}
+footer ul li a:hover {
+  /* color: #3f16c4 !important; */
+  background: linear-gradient(90deg, #3f16c4, #c25dba) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  transition: 0.3s;
+  display: inline-block;
+  transform: scale(1.09);
+}
+footer p {
+  font-size: 0.77rem;
+}
+body.light footer p {
+  color: var(--title) !important;
+}
+@media (max-width: 826px) {
+  footer {
+    flex-direction: column;
+  }
+}

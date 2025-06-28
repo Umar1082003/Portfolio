@@ -1,0 +1,95 @@
+main * {
+  user-select: none;
+}
+main .slide-sec{
+  border-color: var(--border-color) !important;
+}
+
+/* buttons */
+body.light main .slide-sec button{
+  background-color: #FFF !important;
+  color: var(--title) !important;
+  border: 1px solid var(--border-color);
+}
+main .slide-sec button:hover{
+  background-color: rgba(33, 37, 41, 0.518) !important;
+}
+body.light main .slide-sec button:hover{
+  background-color: #e3e3e38c !important;
+}
+main .slide-sec button:active{
+  scale: 0.95;
+}
+main .slide-sec button.active{
+  border: 2px solid;
+  border-image: linear-gradient(90deg, #3f16c4, #c25dba) 1;
+  pointer-events: none;
+}
+body.light main .slide-sec button.active{
+  border: 2px solid;
+  border-image: linear-gradient(90deg, #3f16c4, #c25dba) 1;
+  pointer-events: none;
+  background: linear-gradient(90deg, #3f16c4, #c25dba);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* card */
+main .content-sec .card img{
+  filter: brightness(0.9);
+  border-radius: 5px 5px 0 0 !important;
+}
+/* dark-mode */
+body.dark main .content-sec .card{
+  background-color: #212529;
+  color: var(--title);
+  border: 2px solid var(--border-color);
+  box-shadow: 0px 3px 13px var(--border-color);
+}
+body.dark main .content-sec .card .card-body a{
+  color: var(--subtitle) !important;
+}
+body.dark main .content-sec .card .card-body a:hover{
+  color: var(--purpel) !important;
+}
+/* light-mode */
+body.light main .content-sec .card{
+  background-color: #FFF !important;
+  border: 2px solid var(--border-color);
+  box-shadow: 0px 3px 17px rgba(0, 0, 0, 0.1);
+}
+
+body.light main .content-sec .card .card-body h5{
+  color: #212529 !important;
+}
+
+body.light main .content-sec .card .card-body p,
+body.light main .content-sec .card .card-body a{
+  color: var(--title) !important;
+}
+body.light main .content-sec .card .card-body a:hover{
+  color: var(--purpel) !important;
+}
+/* media query */
+@media (max-width: 768px){
+  main{
+    flex-direction: column;
+    align-items: center;
+  }
+  main .slide-sec{
+    width: 90%;
+    border: none !important;
+    margin-bottom: 30px;
+    text-align: center;
+    padding: 0 !important;
+  }
+  main .slide-sec button{
+    width: 75% !important;
+  }
+  main .content-sec{
+    margin-left: 0 !important;
+  }
+  main .content-sec .card{
+    margin-right: 0 !important;
+  }
+}

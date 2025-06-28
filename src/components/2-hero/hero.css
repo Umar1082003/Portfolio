@@ -1,0 +1,75 @@
+.image {
+  width: 88px;
+}
+.verified-icon{
+  fill: blue;
+  top: 50px;
+  right: -40px;
+}
+section .left-sec h1 {
+  letter-spacing: 1px;
+  font-size: 45px;
+}
+section .left-sec h1 span {
+  /* color: #3f16c4 ; */
+  background: linear-gradient(90deg, #3f16c4, #c25dba);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+section .left-sec p {
+  color: #9f9fa9;
+}
+section .left-sec .social-links span {
+  color: #9f9fa9;
+  margin-right: 27px;
+  font-size: 21px;
+  cursor: pointer;
+  transition: color 0.2s;
+  display: inline-block;
+}
+section .left-sec .social-links span:hover {
+  color: #c2c2cf;
+  transform: scale(1.1);
+}
+body.light section .left-sec .social-links span {
+  color: #c2c2cf;
+}
+body.light section .left-sec .social-links span:hover {
+  color: #9f9fa9;
+
+}
+section .left-sec .social-links span:active {
+  transform: scale(0.8);
+}
+
+@media (max-width: 769px){
+  .animation-sec{
+    display: none;
+  }
+}
+@media (max-width: 690px) {
+  .image {
+    width: 80px;
+  }
+  section .left-sec h1 {
+    letter-spacing: 0px;
+    font-size: 38px;
+  }
+  section .left-sec p {
+    color: #9f9fa9;
+    font-size: 13px;
+  }
+}
+@media (max-width: 590px) {
+  .image {
+    width: 80px;
+  }
+  section .left-sec h1 {
+    letter-spacing: 0px;
+    font-size: 30px;
+  }
+  section .left-sec p {
+    color: #9f9fa9;
+    font-size: 13px;
+  }
+}
