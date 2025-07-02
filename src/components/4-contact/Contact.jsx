@@ -74,7 +74,7 @@ function Contact() {
             style={{ height: "33px" }}
             animationData={doneAnimation}
           />
-          Thank you for your message! We will get back to you soon.
+          Thank you for your message.
         </div>
       )}
     </div>

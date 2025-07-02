@@ -61,8 +61,15 @@ body.light main .content-sec .card{
 
 body.light main .content-sec .card .card-body h5{
   color: #212529 !important;
+  text-wrap: nowrap;
 }
 
+main .content-sec .card .card-body p {
+  font-size: 14px;
+  min-height: 126px;
+  max-height: 130px;
+  overflow: hidden;
+}
 body.light main .content-sec .card .card-body p,
 body.light main .content-sec .card .card-body a{
   color: var(--title) !important;

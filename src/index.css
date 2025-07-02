@@ -118,7 +118,7 @@ a:hover {
 }
 /* ******** */
 /* mobile */
-@media (max-width: 426px) {
+@media (max-width: 500px) {
   .main {
     width: 95%;
     padding: 0 2rem !important;

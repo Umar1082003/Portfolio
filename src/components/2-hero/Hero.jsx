@@ -14,13 +14,13 @@ import "./hero.css";
 function Hero() {
   return (
     <section className="row align-items-center mt-5">
-      <div className="left-sec col-lg-7">
+      <div className="left-sec col-lg-7 col-md-12 col-sm-12">
         <div className="image mt-4 position-relative">
           <motion.img
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
-            src="/assets/omar1.jpg"
+            src="/Portfolio/assets/omar1.jpg"
             alt="#"
             className="w-100 rounded-pill"
           />
@@ -54,18 +54,26 @@ function Hero() {
             next challenge.
           </p>
           <div className="social-links my-4">
-            <span>
+            <a
+              href="https://x.com/OMAR80942659"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaXTwitter />
-            </span>
-            <span>
+            </a>
+            <a>
               <FaInstagram />
-            </span>
-            <span>
+            </a>
+            <a href="https://github.com/Umar1082003 " target="_blank" rel="noopener noreferrer">
               <FaGithub />
-            </span>
-            <span>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/omar-abdelwahab-2a818236a/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaLinkedin />
-            </span>
+            </a>
           </div>
         </motion.div>
       </div>
@@ -74,7 +82,7 @@ function Hero() {
         initial={{ opacity: 0, x: 50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 1, delay: 0.5 }}
-        className="animation-sec col-lg-5"
+        className="animation-sec col-lg-5 col-md-12 col-sm-12"
       >
         <Lottie
           style={{ width: "100%", height: "100%" }}
