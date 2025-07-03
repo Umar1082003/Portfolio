@@ -49,25 +49,12 @@ header button {
   color: red;
   transition: 0.2s;
 }
-body.light header button, 
-body.light header .menu {
-  border: 2px solid #ebe6e693; /* light mode ***************/
-}
 
 header .menu svg,
 header button svg {
   fill: var(--subtitle) !important;
 }
 
-body.light header button svg {
-  fill: gold !important;
-}
-body.light header button:hover {
-  border-color: gold !important;
-}
-body.light header button:hover > svg {
-  fill: gold !important;
-}
 header .menu {
   cursor: pointer;
   opacity: 0;
@@ -79,22 +66,41 @@ header .menu:hover > svg,
 header button:hover > svg {
   fill: var(--title) !important;
 }
-body.light header .menu:hover > svg {
-  fill: var(--subtitle) !important;
-}
 header .menu:hover,
 header button:hover {
   background-color: var(--border-color) !important;
   font-weight: 600 !important;
   border: 2px solid var(--subtitle) !important;
 }
-body.light header .menu:hover,
-body.light header button:hover {
-  background-color: #ffffffdf !important;
-}
 header .menu:active,
 header button:active {
   scale: 0.9;
+}
+body.light header button, 
+body.light header .menu {
+  border: 2px solid var(--subtitle); /* light mode ***************/
+  box-shadow: 1px 1px 5px var(--title);
+}
+body.light header .menu svg {
+  fill: var(--title) !important;
+}
+
+body.light header button svg {
+  fill: gold !important;
+}
+body.light header button:hover {
+  border-color: gold !important;
+}
+body.light header button:hover > svg {
+  fill: gold !important;
+}
+body.light header .menu:hover {
+  border-color: var(--title) !important;
+}
+body.light header .menu:hover,
+body.light header button:hover {
+  background-color: var(--container-bg-color) !important;
+  box-shadow: 0px 0px 0px var(--title) !important
 }
 
 @keyframes scaleMenu {
@@ -107,10 +113,11 @@ header button:active {
   3. pop up
 =========================== */
 header .pop-up{
-  background-color: rgba(40, 40, 48, 0.91);
+  background-color: #282830e8;
   z-index: 9000;
   backdrop-filter: blur(5px);
 }
+
 header .pop-up ul{
   animation: scaleMenu 0.9s 1;
 }
@@ -132,6 +139,19 @@ header .pop-up .close {
 .icon-hover:hover {
   transform: rotate(180deg) scale(1.2);
   box-shadow: 1px 1px 13px rgb(220, 53, 69);
+}
+/* light mode */
+body.light header .pop-up {
+  background-color: var(--container-bg-color) !important;
+}
+body.light header .pop-up ul {
+  background-color: var(--bg-color) !important;
+  border: 2px solid var(--border-color);
+  box-shadow: 0px 0px 10px var(--title);
+}
+body.light header .pop-up ul li a:hover {
+  /* background-color: var(--subtitle) !important; */
+  color: var(--title) !important;
 }
 /* //////////////// */
 

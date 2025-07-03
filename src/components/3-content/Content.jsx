@@ -5,7 +5,7 @@ import Card from "./Card";
 const projects = [
   {
     id: 1,
-    title: "landing page",
+    title: "Modern landing page",
     img: "/Portfolio/assets/landingPageReact.png",
     category: "CSS",
     link: "https://github.com/Umar1082003/Landing-Page-With-React",
@@ -15,7 +15,7 @@ const projects = [
   },
   {
     id: 2,
-    title: "To-Do-List",
+    title: "Smart To-Do-List App",
     img: "/Portfolio/assets/todo.png",
     category: "JS",
     link: "https://github.com/Umar1082003/To-Do-List",
@@ -25,7 +25,7 @@ const projects = [
   },
   {
     id: 3,
-    title: "landing page",
+    title: "Interactive landing page",
     img: "/Portfolio/assets/landingPageJs.png",
     category: "JS",
     link: "https://github.com/Umar1082003/Landing-Page",
@@ -35,7 +35,7 @@ const projects = [
   },
   {
     id: 4,
-    title: "recipe app",
+    title: "recipe Finder app",
     img: "/Portfolio/assets/recipeApp.png",
     category: "JS",
     link: "https://github.com/Umar1082003/Recipe-App",
@@ -45,7 +45,7 @@ const projects = [
   },
   {
     id: 5,
-    title: "E-commerce",
+    title: "React E-commerce Website",
     img: "/Portfolio/assets/e-commerce.png",
     category: "react",
     link: "https://github.com/Umar1082003/E-commerce",
@@ -55,9 +55,9 @@ const projects = [
   },
   {
     id: 6,
-    title: "Landing Page",
+    title: "Bootstrap Landing Page",
     img: "/Portfolio/assets/landingPageBootstrap.png",
-    category: "react",
+    category: "bootstrap",
     link: "https://github.com/Umar1082003/Landing-Page-Bootstrap",
     demo: "https://umar1082003.github.io/Landing-Page-Bootstrap/",
     description:
@@ -70,7 +70,8 @@ const projects = [
     category: "react",
     link: "https://github.com/Umar1082003/Prayer-App",
     demo: "https://umar1082003.github.io/Prayer-App/",
-    description: "A simple prayer times app built with ReactJS. It allows users to view prayer times for their location. The app uses the Aladhan API to fetch prayer times and display them in a user-friendly interface.",
+    description:
+      "A simple prayer times app built with ReactJS. It allows users to view prayer times for their location. The app uses the Aladhan API to fetch prayer times and display them in a user-friendly interface.",
   },
 ];
 
@@ -131,6 +132,16 @@ function Content() {
           } btn text-light bg-dark border-secondary my-3 w-100`}
         >
           ReactJS
+        </button>
+        <button
+          onClick={() => {
+            handleClick("bootstrap");
+          }}
+          className={`${
+            active === "bootstrap" ? "active" : null
+          } btn text-light bg-dark border-secondary my-3 w-100`}
+        >
+          Bootstrap
         </button>
       </section>
       <section className="content-sec col-lg-9 col-md-7 ms-5 d-flex flex-wrap justify-content-center">

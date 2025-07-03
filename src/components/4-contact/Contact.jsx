@@ -62,7 +62,7 @@ function Contact() {
         </form>
         <div className="animation">
           <Lottie
-            style={{ height: "350px" }}
+            style={{ height: "320px" }}
             animationData={contactAnimation}
           />
         </div>

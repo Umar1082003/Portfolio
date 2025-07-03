@@ -35,6 +35,17 @@ body.light main .slide-sec button.active{
 }
 
 /* card */
+main .content-sec .card .card-body{
+  padding-top: 10px;
+}
+main .content-sec .card .card-body h5{
+  height: 50px;
+  /* line-height: 2px; */
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 main .content-sec .card img{
   filter: brightness(0.9);
   border-radius: 5px 5px 0 0 !important;
@@ -61,7 +72,6 @@ body.light main .content-sec .card{
 
 body.light main .content-sec .card .card-body h5{
   color: #212529 !important;
-  text-wrap: nowrap;
 }
 
 main .content-sec .card .card-body p {

@@ -25,18 +25,14 @@ function Card({ projects }) {
             <h5 className="card-title">{item.title}</h5>
             <p className="card-text text-white-50">{item.description}</p>
             <div className="links d-flex justify-content-between">
-              <div>
                 <a href={item.demo} target="_blank" className="text-white-50">
+                  Demo
                   <FaLink className="ms-2" />
                 </a>
                 <a href={item.link} target="_blank" className="text-white-50">
+                  Code
                   <FaGithub className="ms-2" />
                 </a>
-              </div>
-              <a href="#" className="text-primary">
-                more
-                <FaArrowRight className="ms-2" />
-              </a>
             </div>
           </div>
         </motion.div>

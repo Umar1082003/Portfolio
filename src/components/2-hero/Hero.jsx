@@ -14,7 +14,7 @@ import "./hero.css";
 function Hero() {
   return (
     <section className="row align-items-center mt-5">
-      <div className="left-sec col-lg-7 col-md-12 col-sm-12">
+      <div className="left-sec col-lg-7">
         <div className="image mt-4 position-relative">
           <motion.img
             initial={{ opacity: 0, y: -50 }}
@@ -61,10 +61,18 @@ function Hero() {
             >
               <FaXTwitter />
             </a>
-            <a>
+            <a
+              href="https://www.instagram.com/umarabdelwahabsayed/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaInstagram />
             </a>
-            <a href="https://github.com/Umar1082003 " target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://github.com/Umar1082003 "
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaGithub />
             </a>
             <a
@@ -82,7 +90,7 @@ function Hero() {
         initial={{ opacity: 0, x: 50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 1, delay: 0.5 }}
-        className="animation-sec col-lg-5 col-md-12 col-sm-12"
+        className="animation-sec col-lg-5"
       >
         <Lottie
           style={{ width: "100%", height: "100%" }}

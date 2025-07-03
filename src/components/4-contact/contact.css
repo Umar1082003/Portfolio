@@ -40,7 +40,7 @@ body.light .contact form button:hover{
   background-color: var(--border-color) !important;
 }
 /* media query */
-@media (max-width: 1140px){
+@media (max-width: 1023px){
   .animation{
     display: none;
   }

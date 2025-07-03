@@ -2,21 +2,20 @@
 
 :root {
   --bg-color: #000;
-  --container-bg-color: rgb(24, 24, 27);
+  --container-bg-color: #18181b;
   --border-color: #3f3f4666;
   --white-color: #fff;
-  --title: rgb(244, 244, 245);
-  --subtitle: rgb(161, 161, 170);
-  --bg-header: rgb(37, 37, 41);
+  --title: #f4f4f5;
+  --subtitle: #a1a1aa;
+  --bg-header: #252529;
   --purpel: #3f16c4;
 }
 body.light {
   --bg-color: #fff;
   --container-bg-color: #f4f4f482;
   --border-color: #e1e1e193;
-  /* --white-color: #fff; */
-  --subtitle: rgb(244, 244, 245);
-  --title: rgb(161, 161, 170);
+  --subtitle: #f4f4f5;
+  --title: #a1a1aa;
   /* --bg-header: #fff; */
   --purpel: #3f16c4;
 }
