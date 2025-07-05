@@ -9,6 +9,7 @@
   --subtitle: #a1a1aa;
   --bg-header: #252529;
   --purpel: #3f16c4;
+  --pink: #c25dba;
 }
 body.light {
   --bg-color: #fff;
@@ -17,7 +18,6 @@ body.light {
   --subtitle: #f4f4f5;
   --title: #a1a1aa;
   /* --bg-header: #fff; */
-  --purpel: #3f16c4;
 }
 /* Global styles */
 * {
@@ -72,7 +72,7 @@ a:hover {
   transition: 0.3s;
 }
 
-/* scroll bar & scroll2Up */
+/* scroll bar & scrollToUp */
 ::-webkit-scrollbar {
   width: 0.88rem;
 }
@@ -95,8 +95,8 @@ a:hover {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--title);
 }
-.scroll2Up {
-  background: linear-gradient(90deg, #3f16c4, #c25dba);
+.scrollToUp {
+  background: linear-gradient(90deg, var(--purpel), var(--pink));
   right: 2rem;
   bottom: 2rem;
   cursor: pointer;
@@ -105,14 +105,15 @@ a:hover {
   text-align: center;
   line-height: 2.2rem;
   transition: 0.3s;
+  z-index: 1000;
 }
-.scroll2Up:hover,
-.scroll2Up:active {
+.scrollToUp:hover,
+.scrollToUp:active {
   opacity: 0.8;
   color: var(--container-bg-color);
-  box-shadow: 0px 0px 15px #3f16c4;
+  box-shadow: 0px 0px 15px var(--purpel);
 }
-.scroll2Up:active {
+.scrollToUp:active {
   transform: scale(0.7);
 }
 /* ******** */
@@ -121,5 +122,12 @@ a:hover {
   .main {
     width: 95%;
     padding: 0 2rem !important;
+  }
+  .scrollToUp {
+    width: 2rem;
+    height: 2rem;
+    line-height: 1.7rem;
+    right: 1.3rem;
+    bottom: 1.3rem;
   }
 }

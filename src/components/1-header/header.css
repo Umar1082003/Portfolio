@@ -28,13 +28,13 @@ body.light header a {
 
 
 header a {
-  font-weight: 700;
   font-size: 14px;
-  color: #e3e3e6 !important
+  font-weight: 700;
+  color: #e3e3e6 !important;
 }
 header nav a:hover {
-  /* color: #3f16c4 !important; */
-  background: linear-gradient(90deg, #3f16c4, #c25dba) !important;
+  background: linear-gradient(90deg, var(--purpel), var(--pink)) !important;
+  background-clip: text !important;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
 }
@@ -47,7 +47,7 @@ header button {
   background-color: transparent;
   border: 2px solid var(--border-color);
   color: red;
-  transition: 0.2s;
+  transition: 0.3s;
 }
 
 header .menu svg,
@@ -60,10 +60,10 @@ header .menu {
   opacity: 0;
   visibility: hidden;
   border: 2px solid var(--border-color);
-  transition: 0.2s;
+  transition: 0.3s;
 }
-header .menu:hover > svg,
-header button:hover > svg {
+header .menu:hover svg,
+header button:hover svg {
   fill: var(--title) !important;
 }
 header .menu:hover,
@@ -91,7 +91,7 @@ body.light header button svg {
 body.light header button:hover {
   border-color: gold !important;
 }
-body.light header button:hover > svg {
+body.light header button:hover svg {
   fill: gold !important;
 }
 body.light header .menu:hover {
@@ -114,7 +114,7 @@ body.light header button:hover {
 =========================== */
 header .pop-up{
   background-color: #282830e8;
-  z-index: 9000;
+  z-index: 9999;
   backdrop-filter: blur(5px);
 }
 
@@ -131,12 +131,11 @@ header .pop-up .close {
   width: fit-content;
 }
 
-.icon-hover {
+.close-icon {
   transition: transform 0.3s ease;
-  display: inline-block; /* مهم علشان التأثير يشتغل */
 }
 
-.icon-hover:hover {
+.close-icon:hover {
   transform: rotate(180deg) scale(1.2);
   box-shadow: 1px 1px 13px rgb(220, 53, 69);
 }
@@ -150,7 +149,6 @@ body.light header .pop-up ul {
   box-shadow: 0px 0px 10px var(--title);
 }
 body.light header .pop-up ul li a:hover {
-  /* background-color: var(--subtitle) !important; */
   color: var(--title) !important;
 }
 /* //////////////// */
@@ -169,15 +167,8 @@ body.light header .pop-up ul li a:hover {
   }
 }
 
-@media (max-width: 578px){
-  header .pop-up ul{
-    width: 85%;
-    /* text-align: center; */
-  }
-}
-
 /* mobile */
-@media (max-width: 426px){
+@media (max-width: 578px){
   header .pop-up ul{
     width: 85%;
     text-align: center;

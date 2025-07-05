@@ -1,28 +1,29 @@
 .image {
   width: 88px;
-  min-height: 88px;
+  aspect-ratio: 1/1;
 }
+
 .verified-icon {
   fill: blue;
-  top: 50px;
-  right: -40px;
+  top: 52px;
+  right: -45px;
 }
 section .left-sec h1 {
   letter-spacing: 1px;
   font-size: 43px;
 }
 section .left-sec h1 span {
-  /* color: #3f16c4 ; */
-  background: linear-gradient(90deg, #3f16c4, #c25dba);
+  background: linear-gradient(90deg, var(--purpel), var(--pink));
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 section .left-sec p {
-  color: #9f9fa9;
+  color: var(--title);
   font-size: 15px;
 }
 section .left-sec .social-links a {
-  color: #9f9fa9;
+  color: var(--subtitle) !important;
   margin-right: 27px;
   font-size: 21px;
   cursor: pointer;
@@ -30,21 +31,26 @@ section .left-sec .social-links a {
   display: inline-block;
 }
 section .left-sec .social-links a:hover {
-  color: #c2c2cf;
+  color: var(--title) !important;
   transform: scale(1.1);
 }
+/* light mode */
 body.light section .left-sec .social-links a {
-  color: #c2c2cf;
+  color: var(--title) !important;
 }
 body.light section .left-sec .social-links a:hover {
-  color: #9f9fa9;
+  color: #212529 !important;
 }
 section .left-sec .social-links a:active {
   transform: scale(0.8);
 }
+/* media query */
 @media (min-width: 991px) and (max-width: 1200px) {
   .image {
     width: 80px;
+  }
+  .verified-icon {
+    top: 45px;
   }
   section .left-sec h1 {
     letter-spacing: 0px;
@@ -58,57 +64,23 @@ section .left-sec .social-links a:active {
   .image {
     width: 80px;
   }
+  .verified-icon {
+    top: 45px;
+  }
   section .left-sec h1 {
-    letter-spacing: 0px;
     font-size: 38px;
+    letter-spacing: 0px;
   }
   section .left-sec p {
-    color: #9f9fa9;
     font-size: 13px;
   }
   .animation-sec {
     display: none;
   }
 }
-@media (max-width: 769px) {
-  .image {
-    width: 80px;
-  }
-  section .left-sec h1 {
-    letter-spacing: 0px;
-    font-size: 38px;
-  }
-  section .left-sec p {
-    color: #9f9fa9;
-    font-size: 13px;
-  }
-  .animation-sec {
-    display: none;
-  }
-}
-@media (max-width: 690px) {
-  .image {
-    width: 80px;
-  }
-  section .left-sec h1 {
-    letter-spacing: 0px;
-    font-size: 38px;
-  }
-  section .left-sec p {
-    color: #9f9fa9;
-    font-size: 13px;
-  }
-}
+
 @media (max-width: 590px) {
-  .image {
-    width: 80px;
-  }
   section .left-sec h1 {
-    letter-spacing: 0px;
     font-size: 30px;
-  }
-  section .left-sec p {
-    color: #9f9fa9;
-    font-size: 13px;
   }
 }

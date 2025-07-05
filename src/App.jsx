@@ -1,29 +1,27 @@
 import { useEffect, useState } from "react";
+// components
 import Header from "./components/1-header/Header";
 import Hero from "./components/2-hero/Hero";
 import Content from "./components/3-content/Content";
 import Contact from "./components/4-contact/Contact";
 import Footer from "./components/5-footer/Footer";
-
+// icons
 import { IoIosArrowUp } from "react-icons/io";
 
 function App() {
   const [showScrollBtn, setShowScrollBtn] = useState(false);
-  const scroll2UpFn = () => {
+  // Function to scroll to the top of the page
+  const scrollToUpFn = () => {
     window.scrollTo({
       top: 0,
       behavior: "smooth",
     });
   };
-  // Scroll to top when the page loads
-  // window.addEventListener("load", () => {
-  //   window.scrollTo(0, 0);
-  // });
+  // Effect to show/hide the scroll button based on scroll position
   useEffect(() => {
     window.addEventListener("scroll", () => {
       if (window.scrollY > 400) {
         setShowScrollBtn(true);
-        // alert("You have scrolled down the page!");
       } else {
         setShowScrollBtn(false);
       }
@@ -40,18 +38,13 @@ function App() {
       <Contact />
       <div className="tline"></div>
       <Footer />
-      {/* {showScrollBtn && (
-        <div
-          onClick={scroll2UpFn}
-          className="scroll2Up bg-primary rounded-pill position-fixed"
-        >
-          <IoIosArrowUp />
-        </div>
-      )} */}
       <div
-        style={{opacity: showScrollBtn ? 1 : 0}}
-        onClick={scroll2UpFn}
-        className="scroll2Up rounded-pill position-fixed"
+        style={{
+          opacity: showScrollBtn ? 1 : 0,
+          pointerEvents: showScrollBtn ? "auto" : "none",
+        }}
+        onClick={scrollToUpFn}
+        className="scrollToUp rounded-pill position-fixed"
       >
         <IoIosArrowUp />
       </div>

@@ -2,14 +2,27 @@ import React from "react";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaInstagram, FaGithub, FaLinkedin } from "react-icons/fa";
 import { VscVerifiedFilled } from "react-icons/vsc";
-// import { IoIosArrowUp } from "react-icons/io";
-// import { IoIosArrowRoundDown } from "react-icons/io";
+import { IoIosArrowRoundDown } from "react-icons/io";
 // animation
 import Lottie from "lottie-react";
 import devAnimation from "../../animations/dev.json";
-// framer-motion
-import { motion } from "motion/react";
+// framer-motion for animations
+import { motion } from "framer-motion";
+
 import "./hero.css";
+
+const socialLinks = [
+  { href: "https://x.com/OMAR80942659", icon: <FaXTwitter /> },
+  {
+    href: "https://www.instagram.com/umarabdelwahabsayed/",
+    icon: <FaInstagram />,
+  },
+  { href: "https://github.com/Umar1082003", icon: <FaGithub /> },
+  {
+    href: "https://www.linkedin.com/in/omar-abdelwahab-2a818236a/",
+    icon: <FaLinkedin />,
+  },
+];
 
 function Hero() {
   return (
@@ -40,7 +53,7 @@ function Hero() {
           className="text mt-4"
         >
           <h1 className="my-4 fw-bold">
-            Self-Taught <span>Front-End Developer</span>, With a passion for
+            Self-Taught <span>Front-End Developer</span>, with a passion for
             growth and innovation
           </h1>
           <p className="my-4">
@@ -54,34 +67,16 @@ function Hero() {
             next challenge.
           </p>
           <div className="social-links my-4">
-            <a
-              href="https://x.com/OMAR80942659"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaXTwitter />
-            </a>
-            <a
-              href="https://www.instagram.com/umarabdelwahabsayed/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaInstagram />
-            </a>
-            <a
-              href="https://github.com/Umar1082003 "
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaGithub />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/omar-abdelwahab-2a818236a/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaLinkedin />
-            </a>
+            {socialLinks.map((link, index) => (
+              <a
+                key={index}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {link.icon}
+              </a>
+            ))}
           </div>
         </motion.div>
       </div>
@@ -92,11 +87,7 @@ function Hero() {
         transition={{ duration: 1, delay: 0.5 }}
         className="animation-sec col-lg-5"
       >
-        <Lottie
-          style={{ width: "100%", height: "100%" }}
-          animationData={devAnimation}
-          loop={true}
-        />
+        <Lottie className="w-100 h-100" animationData={devAnimation} loop />
       </motion.div>
     </section>
   );

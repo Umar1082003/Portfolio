@@ -6,12 +6,24 @@ import "./contact.css";
 import Lottie from "lottie-react";
 import doneAnimation from "../../animations/done.json";
 import contactAnimation from "../../animations/contact.json";
-// Contact component
-// This component allows users to send messages via a contact form.
-// It uses Formspree for form handling and includes animations for better user experience.
-function Contact() {
-  const [state, handleSubmit] = useForm("mpwroere");
 
+function Contact() {
+  const FORM_ID = "mpwroere";
+  const [state, handleSubmit] = useForm(FORM_ID);
+  
+  if (state.succeeded) {
+    return (
+      <div className="alert alert-success mt-3 d-flex align-items-center gap-2">
+        <Lottie
+          loop
+          style={{ height: "33px" }}
+          animationData={doneAnimation}
+        />
+        Thank you for your message.
+      </div>
+    );
+  }
+  
   return (
     <div className="contact">
       <h1 className="fw-bold">
@@ -33,6 +45,7 @@ function Contact() {
             name="email"
             id="email"
             placeholder="Email Address"
+            aria-label="Email Address"
             required
           />
           <ValidationError prefix="Email" field="email" errors={state.errors} />
@@ -43,7 +56,8 @@ function Contact() {
             className="bg-dark border-0 p-2 rounded text-white"
             name="message"
             id="message"
-            placeholder="Type your message here..."
+            placeholder="Write your message (question, feedback, etc)..."
+            aria-label="Your Message"
             required
           ></textarea>
           <ValidationError
@@ -57,7 +71,7 @@ function Contact() {
             disabled={state.submitting}
             value="Submit"
           >
-            Submit
+            {state.submitting ? "Sending..." : "Submit"}
           </button>
         </form>
         <div className="animation">
@@ -67,16 +81,6 @@ function Contact() {
           />
         </div>
       </div>
-      {state.succeeded && (
-        <div className="alert alert-success mt-3 d-flex align-items-center gap-2">
-          <Lottie
-            loop={false}
-            style={{ height: "33px" }}
-            animationData={doneAnimation}
-          />
-          Thank you for your message.
-        </div>
-      )}
     </div>
   );
 }
