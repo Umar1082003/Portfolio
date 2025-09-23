@@ -11,6 +11,7 @@ const categories = [
   { label: "JavaScript", value: "JS" },
   { label: "ReactJS", value: "react" },
   { label: "Bootstrap", value: "bootstrap" },
+  { label: "MUI", value: "mui" },
 ];
 
 
@@ -23,7 +24,10 @@ function Content() {
     setActive(buttonCategory);
 
     const newArr = buttonCategory === "all" ? projects : projects.filter((item) => {
-      return item.category === buttonCategory;
+      const newItem = item.category.find((myItem) => {
+        return myItem === buttonCategory;
+      });
+      return newItem === buttonCategory;
     });
     setFilteredProjects(newArr);
   };

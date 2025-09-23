@@ -1,29 +1,70 @@
 const projects = [
-  {
-    id: 1,
-    title: "Modern landing page",
-    img: "/Portfolio/assets/landingPageReact.png",
-    category: "CSS",
-    link: "https://github.com/Umar1082003/Landing-Page-With-React",
-    demo: "https://umar1082003.github.io/Landing-Page-With-React/",
-    description:
-      "A simple landing page built using HTML and CSS. It features a responsive design with a clean layout and modern styling and some animations.",
+  {  // {
+  //   id: 1,
+  //   title: "Modern Landing Page",
+  //   img: "/Portfolio/assets/landingPageReact.png",
+  //   category: "CSS",
+  //   link: "https://github.com/Umar1082003/Landing-Page-With-React",
+  //   demo: "https://umar1082003.github.io/Landing-Page-With-React/",
+  //   description:
+  //     "A simple landing page built using HTML and CSS. It features a responsive design with a clean layout and modern styling and some animations.",
+  // },
   },
   {
     id: 2,
-    title: "Smart To-Do-List App",
-    img: "/Portfolio/assets/todo.png",
-    category: "JS",
-    link: "https://github.com/Umar1082003/To-Do-List",
-    demo: "https://umar1082003.github.io/To-Do-List/",
+    title: "React E-commerce Website",
+    img: "/Portfolio/assets/e-commerce.png",
+    category: ["react"],
+    link: "https://github.com/Umar1082003/E-commerce",
+    demo: "https://umar1082003.github.io/E-commerce",
     description:
-      "To-Do List app built with JavaScript. It allows users to add, delete, edit, and mark tasks as completed. The app uses local storage to save tasks. The user interface is clean and intuitive.",
+      "E-commerce website built with ReactJS. It features a product listing, product details, and a shopping cart. The app uses React Router for navigation and local storage to save the cart items. The user interface is responsive and user-friendly.",
+  },
+  {
+    id: 8,
+    title: "Admin Dashboard",
+    img: "/Portfolio/assets/Dashboard.png",
+    category: ["react", "mui"],
+    link: "https://github.com/Umar1082003/Admin-Dashboard",
+    demo: "https://umar1082003.github.io/Admin-Dashboard/",
+    description:
+      "A modern admin dashboard built with React. It features routing with React Router, form handling with React Hook Form, and a clean UI powered by MUI. Data visualization is implemented using Nivo and other libraries to deliver interactive and responsive charts.",
+  },
+  {
+    id: 10,
+    title: "Skywings Travel Website",
+    img: "/Portfolio/assets/Skywings.png",
+    category: ["CSS"],
+    link: "https://github.com/Umar1082003/Skywings",
+    demo: "https://umar1082003.github.io/Skywings/",
+    description:
+      "A travel website built using HTML and CSS. It features a responsive design with a clean layout and modern styling. The app uses CSS Flexbox and Grid for the layout and styling.",
+  },
+  {
+    id: 9,
+    title: "Weather App",
+    img: "/Portfolio/assets/Weather.png",
+    category: ["JS"],
+    link: "https://github.com/Umar1082003/WeatherApp",
+    demo: "https://umar1082003.github.io/WeatherApp/",
+    description:
+      "A weather app built with JavaScript. It allows users to search for the current weather in any city. The app uses the OpenWeatherMap API to fetch weather data and display it in a user-friendly interface. The app is responsive and works well on mobile devices.",
+  },
+  {
+    id: 11,
+    title: "Coffee Shop Website",
+    img: "/Portfolio/assets/Coffee.png",
+    category: ["CSS", "JS"],
+    link: "https://github.com/Umar1082003/Coffee-Shop",
+    demo: "https://umar1082003.github.io/Coffee-Shop/",
+    description:
+      "A coffee shop website built with JavaScript. It features a responsive design with a clean layout and modern styling. The app uses JavaScript to add interactivity and enhance the user experience.",
   },
   {
     id: 3,
-    title: "Interactive landing page",
+    title: "Interactive Landing Page",
     img: "/Portfolio/assets/landingPageJs.png",
-    category: "JS",
+    category: ["CSS", "JS"],
     link: "https://github.com/Umar1082003/Landing-Page",
     demo: "https://umar1082003.github.io/Landing-Page/",
     description:
@@ -31,9 +72,9 @@ const projects = [
   },
   {
     id: 4,
-    title: "recipe Finder app",
+    title: "Recipe Finder App",
     img: "/Portfolio/assets/recipeApp.png",
-    category: "JS",
+    category: ["JS"],
     link: "https://github.com/Umar1082003/Recipe-App",
     demo: "https://umar1082003.github.io/Recipe-App/",
     description:
@@ -41,34 +82,34 @@ const projects = [
   },
   {
     id: 5,
-    title: "React E-commerce Website",
-    img: "/Portfolio/assets/e-commerce.png",
-    category: "react",
-    link: "https://github.com/Umar1082003/E-commerce",
-    demo: "https://umar1082003.github.io/E-commerce",
+    title: "Smart To-Do-List App",
+    img: "/Portfolio/assets/todo.png",
+    category: ["CSS", "JS"],
+    link: "https://github.com/Umar1082003/To-Do-List",
+    demo: "https://umar1082003.github.io/To-Do-List/",
     description:
-      "E-commerce website built with ReactJS. It features a product listing, product details, and a shopping cart. The app uses React Router for navigation and local storage to save the cart items. The user interface is responsive and user-friendly.",
+      "To-Do List app built with JavaScript. It allows users to add, delete, edit, and mark tasks as completed. The app uses local storage to save tasks. The user interface is clean and intuitive.",
   },
-  {
-    id: 6,
-    title: "Bootstrap Landing Page",
-    img: "/Portfolio/assets/landingPageBootstrap.png",
-    category: "bootstrap",
-    link: "https://github.com/Umar1082003/Landing-Page-Bootstrap",
-    demo: "https://umar1082003.github.io/Landing-Page-Bootstrap/",
-    description:
-      "landing page built with Bootstrap. It features a responsive design with a clean layout and modern styling. The app uses Bootstrap components for the layout and styling.",
+  {  // {
+  //   id: 6,
+  //   title: "Bootstrap Landing Page",
+  //   img: "/Portfolio/assets/landingPageBootstrap.png",
+  //   category: "bootstrap",
+  //   demo: "https://umar1082003.github.io/Landing-Page-Bootstrap/",
+  //   link: "https://github.com/Umar1082003/Landing-Page-Bootstrap",
+  //   description:
+  //     "landing page built with Bootstrap. It features a responsive design with a clean layout and modern styling. The app uses Bootstrap components for the layout and styling.",
+  // },
   },
   {
     id: 7,
     title: "Prayer Times",
     img: "/Portfolio/assets/prayerTimes.png",
-    category: "react",
+    category: ["react"],
     link: "https://github.com/Umar1082003/Prayer-App",
     demo: "https://umar1082003.github.io/Prayer-App/",
     description:
       "A simple prayer times app built with ReactJS. It allows users to view prayer times for their location. The app uses the Aladhan API to fetch prayer times and display them in a user-friendly interface.",
   },
 ];
-
 export default projects;
