@@ -10,22 +10,14 @@
   1. Header Design
 =========================== */
 header nav {
-  background-color: var(--bg-header) !important;
   border: 2px solid var(--border-color);
   border-radius: 30px;
   padding: 3px 5px;
 }
 
-
-body.light header nav {
-  background-color: var(--white-color) !important;
-  border: 2px solid #ebe6e693; /* light mode ***************/
-  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
-}
 body.light header a {
-  color: #807c7c8d !important;
+  color: #fff !important;
 }
-
 
 header a {
   font-size: 14px;
@@ -38,6 +30,12 @@ header nav a:hover {
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
 }
+header nav a.active {
+  background: linear-gradient(90deg, var(--purpel), var(--pink)) !important;
+  background-clip: text !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
 
 /* ========================
   2. Button & icon
@@ -45,8 +43,12 @@ header nav a:hover {
 header button {
   height: fit-content;
   background-color: transparent;
-  border: 2px solid var(--border-color);
-  color: red;
+  transition: 0.3s;
+}
+header .menu {
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
   transition: 0.3s;
 }
 
@@ -54,35 +56,21 @@ header .menu svg,
 header button svg {
   fill: var(--subtitle) !important;
 }
-
-header .menu {
-  cursor: pointer;
-  opacity: 0;
-  visibility: hidden;
-  border: 2px solid var(--border-color);
-  transition: 0.3s;
-}
 header .menu:hover svg,
 header button:hover svg {
   fill: var(--title) !important;
 }
-header .menu:hover,
-header button:hover {
+body.dark header .menu:hover,
+body.dark header button:hover {
   background-color: var(--border-color) !important;
-  font-weight: 600 !important;
-  border: 2px solid var(--subtitle) !important;
 }
 header .menu:active,
 header button:active {
   scale: 0.9;
 }
-body.light header button, 
-body.light header .menu {
-  border: 2px solid var(--subtitle); /* light mode ***************/
-  box-shadow: 1px 1px 5px var(--title);
-}
+/* light mode */
 body.light header .menu svg {
-  fill: var(--title) !important;
+  fill: var(--white-color) !important;
 }
 
 body.light header button svg {
@@ -91,35 +79,41 @@ body.light header button svg {
 body.light header button:hover {
   border-color: gold !important;
 }
-body.light header button:hover svg {
-  fill: gold !important;
-}
+
 body.light header .menu:hover {
   border-color: var(--title) !important;
 }
-body.light header .menu:hover,
-body.light header button:hover {
-  background-color: var(--container-bg-color) !important;
-  box-shadow: 0px 0px 0px var(--title) !important
-}
 
 @keyframes scaleMenu {
-  0% {scale: 0;}
-  60% {scale: 1.2;}
-  100% {scale: 1;}
+  0% {
+    scale: 0;
+  }
+  60% {
+    scale: 1.2;
+  }
+  100% {
+    scale: 1;
+  }
 }
 
 /* ========================
   3. pop up
 =========================== */
-header .pop-up{
-  background-color: #282830e8;
+header .pop-up {
   z-index: 9999;
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(10px);
 }
 
-header .pop-up ul{
+header .pop-up ul {
   animation: scaleMenu 0.9s 1;
+  width: 90% !important;
+}
+header .pop-up ul li a:hover,
+header .pop-up ul li a.active {
+  color: #222224 !important;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 5px 10px;
+  border-radius: 10px;
 }
 
 header .pop-up li:not(:first-child, :last-child) {
@@ -131,28 +125,29 @@ header .pop-up .close {
   width: fit-content;
 }
 
-.close-icon {
-  transition: transform 0.3s ease;
-}
-
 .close-icon:hover {
   transform: rotate(180deg) scale(1.2);
   box-shadow: 1px 1px 13px rgb(220, 53, 69);
+  transition: transform 0.3s ease;
 }
 /* light mode */
 body.light header .pop-up {
-  background-color: var(--container-bg-color) !important;
+  backdrop-filter: blur(8px) !important;
 }
 body.light header .pop-up ul {
-  background-color: var(--bg-color) !important;
-  border: 2px solid var(--border-color);
-  box-shadow: 0px 0px 10px var(--title);
+  border: 2px solid rgba(255, 255, 255, 0.3) !important;
 }
-body.light header .pop-up ul li a:hover {
-  color: var(--title) !important;
+body.light header .pop-up ul li a {
+  color: #222224a0 !important;
+}
+body.light header .pop-up ul li a:hover,
+body.light header .pop-up ul li a.active {
+  color: #222224 !important;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 5px 10px;
+  border-radius: 10px;
 }
 /* //////////////// */
-
 
 /* ========================
   4- Responsive Design (media query)
@@ -168,8 +163,8 @@ body.light header .pop-up ul li a:hover {
 }
 
 /* mobile */
-@media (max-width: 578px){
-  header .pop-up ul{
+@media (max-width: 578px) {
+  header .pop-up ul {
     width: 85%;
     text-align: center;
   }

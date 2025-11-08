@@ -6,10 +6,17 @@ import { IoMoon } from "react-icons/io5";
 import "./header.css";
 // framer-motion for animations
 import { motion } from "framer-motion";
+import { Link, NavLink, useLocation } from "react-router-dom";
 
-const navLinks = ["About", "Articles", "Projects", "Speaking", "Contact"];
+const navLinks = [
+  { name: "About", path: "/" },
+  { name: "Projects", path: "/projects" },
+  { name: "Skills", path: "/skills" },
+  { name: "Contact", path: "/contact" },
+];
 
 function Header() {
+  const location = useLocation();
   const [popUp, setPopUp] = useState(false);
   const [theme, setTheme] = useState(() => {
     return localStorage.getItem("currentTheme") || "dark";
@@ -24,6 +31,14 @@ function Header() {
     document.body.className = theme; // Apply the theme to the body class
   }, [theme]);
 
+  useEffect(() => {
+      setPopUp(false);
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+  }, [location]);
+
   return (
     <motion.header
       initial={{ opacity: 0, y: -50 }}
@@ -33,7 +48,7 @@ function Header() {
     >
       {/* menu icon */}
       <div
-        className="menu p-2 lh-1 rounded-pill"
+        className="menu p-2 lh-1 rounded-pill glass-card"
         onClick={() => {
           setPopUp(true);
         }}
@@ -42,11 +57,11 @@ function Header() {
       </div>
 
       {/* navlist */}
-      <nav>
+      <nav className="glass-card">
         <ul className="d-flex gap-4 py-1 px-3 m-0">
-          {navLinks.map((text, index) => (
-            <li key={index}>
-              <a href="#">{text}</a>
+          {navLinks.map((obj) => (
+            <li key={obj.name}>
+              <NavLink to={obj.path}>{obj.name}</NavLink>
             </li>
           ))}
         </ul>
@@ -55,7 +70,7 @@ function Header() {
       {/* light&dark button */}
       <button
         onClick={handleDarkLight}
-        className="text-light p-2 lh-1 rounded-pill"
+        className="text-light p-2 lh-1 rounded-pill glass-card"
       >
         {theme === "dark" ? (
           <IoMoon className="fs-5" />
@@ -67,7 +82,7 @@ function Header() {
       {/* pop up menu */}
       {popUp && (
         <div className="pop-up w-100 h-100 position-fixed top-0 start-0">
-          <ul className="bg-dark container my-5 py-3 px-4 rounded">
+          <ul className="container my-5 py-3 px-4 rounded glass-card">
             <li
               className="close text-danger ms-auto border-0"
               onClick={() => {
@@ -78,7 +93,7 @@ function Header() {
             </li>
             {navLinks.map((text, index) => (
               <li className="py-3" key={index}>
-                <a href="#">{text}</a>
+                <Link to={text.path}>{text.name}</Link>
               </li>
             ))}
           </ul>
@@ -89,15 +104,3 @@ function Header() {
 }
 
 export default Header;
-//           </li>
-{
-  /* <li>
-<a href="#">Projects</a>
-</li>
-<li>
-<a href="#">Speaking</a>
-</li>
-<li>
-<a href="#">Contact</a>
-</li>  */
-}

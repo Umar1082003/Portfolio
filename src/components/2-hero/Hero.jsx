@@ -2,7 +2,7 @@ import React from "react";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaInstagram, FaGithub, FaLinkedin } from "react-icons/fa";
 import { VscVerifiedFilled } from "react-icons/vsc";
-import { IoIosArrowRoundDown } from "react-icons/io";
+import { HiOutlineDownload } from "react-icons/hi";
 // animation
 import Lottie from "lottie-react";
 import devAnimation from "../../animations/dev.json";
@@ -10,6 +10,7 @@ import devAnimation from "../../animations/dev.json";
 import { motion } from "framer-motion";
 
 import "./hero.css";
+import CV from "/public/assets/Omar-Abdelwahab-Sayed.pdf";
 
 const socialLinks = [
   { href: "https://x.com/OMAR80942659", icon: <FaXTwitter /> },
@@ -35,7 +36,7 @@ function Hero() {
             transition={{ duration: 1 }}
             src="/Portfolio/assets/omar1.jpg"
             alt="#"
-            className="w-100 rounded-pill"
+            className="w-100 rounded-pill glass-card p-1"
           />
           <motion.span
             initial={{ opacity: 0 }}
@@ -58,29 +59,40 @@ function Hero() {
           </h1>
           <p className="my-4">
             I’m a self-taught front-end developer who learned everything from
-            scratch at home through YouTube. I’ve already built several projects
-            including an e-commerce site, a to-do list app, and multiple landing
-            pages. I’m deeply passionate about learning and constantly improving
-            myself — not just as a developer, but as a person. My dream is to
-            work in global tech environments, where I can grow, contribute, and
-            make an impact. Fast learner. Highly motivated. Always ready for the
-            next challenge.
+            scratch at home through YouTube. I’ve already built several
+            projects. I’m deeply passionate about learning and constantly
+            improving myself — not just as a developer, but as a person. My
+            dream is to work in global tech environments, where I can grow,
+            contribute, and make an impact. Fast learner. Highly motivated.
+            Always ready for the next challenge.
           </p>
-          <div className="social-links my-4">
-            {socialLinks.map((link, index) => (
-              <a
-                key={index}
-                href={link.href}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {link.icon}
-              </a>
-            ))}
+          <div className="d-flex gap-3 flex-column flex-md-row align-items-md-center flex-wrap">
+            <div className="social-links my-4 glass-card p-2 px-md-3 px-5">
+              {socialLinks.map((link, index) => (
+                <a
+                  key={index}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mb-1"
+                >
+                  {link.icon}
+                </a>
+              ))}
+            </div>
+            <a
+              className="px-3 py-2 rounded-pill cvBtn mt-2 mt-md-0 me-0 glass-card"
+              rel="stylesheet"
+              href={CV}
+              download={true}
+            >
+              Download CV
+              <HiOutlineDownload className="ms-1 mb-1" />
+            </a>
           </div>
         </motion.div>
       </div>
-
+      {/* animation section */}
       <motion.div
         initial={{ opacity: 0, x: 50 }}
         animate={{ opacity: 1, x: 0 }}

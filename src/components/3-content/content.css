@@ -1,54 +1,55 @@
 main button {
   user-select: none;
 }
-main .slide-sec{
+main .slide-sec {
   border-color: var(--border-color) !important;
+  /* width: fit-content; */
 }
 
 /* buttons */
-main .slide-sec button:hover{
+main .slide-sec button {
+  color: #ffffff !important;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+main .slide-sec button:hover {
   background-color: #21252984 !important;
 }
-main .slide-sec button:active{
+main .slide-sec button:active {
   scale: 0.95;
 }
-body.light main .slide-sec button{
-  background-color: var(--white-color) !important;
-  color: var(--title) !important;
-  border: 1px solid var(--border-color);
+body.light main .slide-sec button {
+  color: var(--white-color) !important;
 }
-body.light main .slide-sec button:hover{
-  background-color: #e3e3e38c !important;
+body.light main .slide-sec button:hover {
+  background: rgb(255, 255, 255, 0.2) !important;
 }
 main .slide-sec button.active,
-body.light main .slide-sec button.active{
+body.light main .slide-sec button.active {
   border: 2px solid;
-  border-image: linear-gradient(90deg, var(--purpel), var(--pink)) 1;
+  background-color: transparent !important;
   pointer-events: none;
 }
-body.light main .slide-sec button.active{
-  background: linear-gradient(90deg, var(--purpel), var(--pink));
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+body.light main .slide-sec button.active {
+  color: #212529 !important;
 }
-
 
 /* card */
-main .content-sec .card{
+main .content-sec .card {
   width: 15rem;
 }
-main .content-sec .card img{
+main .content-sec .card img {
   filter: brightness(0.9);
   border-radius: 5px 5px 0 0 !important;
   width: 100%;
-  height: 140px;  
+  height: 140px;
   object-fit: cover;
 }
-main .content-sec .card .card-body{
+main .content-sec .card .card-body {
   padding-top: 10px;
 }
-main .content-sec .card .card-body h5{
+main .content-sec .card .card-body h5 {
   height: 50px;
   display: flex;
   align-items: center;
@@ -60,68 +61,62 @@ main .content-sec .card .card-body p {
   min-height: 126px;
   max-height: 130px;
   overflow: hidden;
-  
 }
 /* dark-mode */
-body.dark main .content-sec .card{
-  background-color: #212529;
+body.dark main .content-sec .card {
   color: var(--title);
-  border: 2px solid var(--border-color);
-  box-shadow: 0px 3px 13px var(--border-color);
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  border: 3px solid var(--border-color);
 }
-body.dark main .content-sec .card:hover{
-  transform: scale(1.03) !important;
-  box-shadow: 0px 3px 13px rgba(155, 155, 155, 0.2) !important;
+body.dark main .content-sec .card:hover {
+  transform: scale(1.02) !important;
+  transition: all 0.3s ease !important;
 }
-body.dark main .content-sec .card .card-body a{
+body.dark main .content-sec .card .card-body a {
   color: var(--subtitle) !important;
 }
-body.dark main .content-sec .card .card-body a:hover{
+body.dark main .content-sec .card .card-body a:hover {
   color: var(--purpel) !important;
 }
 /* light-mode */
-body.light main .content-sec .card{
-  background-color: var(--white-color) !important;
-  border: 2px solid var(--border-color);
-  box-shadow: 0px 3px 17px rgba(0, 0, 0, 0.1);
+body.light main .content-sec .card:hover {
+  transform: scale(1.02) !important;
+  transition: all 0.3s ease !important;
 }
-body.light main .content-sec .card:hover{
-  transform: scale(1.03) !important;
-  box-shadow: 0px 3px 17px rgba(0, 0, 0, 0.2) !important;
-}
-body.light main .content-sec .card .card-body h5{
+body.light main .content-sec .card .card-body h5 {
   color: #212529 !important;
 }
 body.light main .content-sec .card .card-body p,
-body.light main .content-sec .card .card-body a{
-  color: var(--title) !important;
+body.light main .content-sec .card .card-body a {
+  color: var(--white-color) !important;
 }
-body.light main .content-sec .card .card-body a:hover{
+body.light main .content-sec .card .card-body a:hover {
   color: var(--purpel) !important;
 }
 /* media query */
-@media (max-width: 768px){
-  main{
+@media (max-width: 768px) {
+  main {
     flex-direction: column;
     align-items: center;
   }
-  main .slide-sec{
+  main .slide-sec {
     width: 90%;
     border: none !important;
     margin-bottom: 30px;
     text-align: center;
     padding: 0 !important;
   }
-  main .slide-sec button{
+  main .slide-sec button {
     /* width: 70% !important; */
     width: 100%;
     max-width: 300px;
     margin: auto;
   }
-  main .content-sec{
+  main .content-sec {
     margin-left: 0 !important;
   }
-  main .content-sec .card{
+  main .content-sec .card {
     margin-right: 0 !important;
   }
 }

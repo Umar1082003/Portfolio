@@ -3,7 +3,7 @@ const projects = [
     id: 2,
     title: "React E-commerce Website",
     img: "/Portfolio/assets/e-commerce.png",
-    category: ["react"],
+    category: ["react&MUI"],
     link: "https://github.com/Umar1082003/E-commerce",
     demo: "https://umar1082003.github.io/E-commerce",
     description:
@@ -13,7 +13,7 @@ const projects = [
     id: 8,
     title: "Admin Dashboard",
     img: "/Portfolio/assets/Dashboard.png",
-    category: ["react", "mui"],
+    category: ["react&MUI"],
     link: "https://github.com/Umar1082003/Admin-Dashboard",
     demo: "https://umar1082003.github.io/Admin-Dashboard/",
     description:
@@ -43,7 +43,7 @@ const projects = [
     id: 11,
     title: "Coffee Shop Website",
     img: "/Portfolio/assets/Coffee.png",
-    category: ["CSS", "JS"],
+    category: ["CSS"],
     link: "https://github.com/Umar1082003/Coffee-Shop",
     demo: "https://umar1082003.github.io/Coffee-Shop/",
     description:
@@ -73,7 +73,7 @@ const projects = [
     id: 5,
     title: "Smart To-Do-List App",
     img: "/Portfolio/assets/todo.png",
-    category: ["CSS", "JS"],
+    category: ["JS"],
     link: "https://github.com/Umar1082003/To-Do-List",
     demo: "https://umar1082003.github.io/To-Do-List/",
     description:
@@ -83,7 +83,7 @@ const projects = [
     id: 7,
     title: "Prayer Times",
     img: "/Portfolio/assets/prayerTimes.png",
-    category: ["react"],
+    category: ["react&MUI"],
     link: "https://github.com/Umar1082003/Prayer-App",
     demo: "https://umar1082003.github.io/Prayer-App/",
     description:

@@ -11,7 +11,10 @@ node_modules
 dist
 dist-ssr
 *.local
-hiddenProjects
+hiddenProjects.js
+test.txt
+7-aboutMe
+Education.jsx
 
 # Editor directories and files
 .vscode/*

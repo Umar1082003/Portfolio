@@ -1,5 +1,5 @@
 .image {
-  width: 88px;
+  width: 98px;
   aspect-ratio: 1/1;
 }
 
@@ -19,24 +19,27 @@ section .left-sec h1 span {
   -webkit-text-fill-color: transparent;
 }
 section .left-sec p {
-  color: var(--title);
+  color: var(--white-color);
   font-size: 15px;
 }
 section .left-sec .social-links a {
   color: var(--subtitle) !important;
-  margin-right: 27px;
   font-size: 21px;
   cursor: pointer;
   transition: color 0.2s;
   display: inline-block;
 }
+section .left-sec .social-links a:not(:last-child) {
+  margin-right: 27px;
+}
+
 section .left-sec .social-links a:hover {
   color: var(--title) !important;
   transform: scale(1.1);
 }
 /* light mode */
 body.light section .left-sec .social-links a {
-  color: var(--title) !important;
+  color: var(--white-color) !important;
 }
 body.light section .left-sec .social-links a:hover {
   color: #212529 !important;
@@ -83,4 +86,7 @@ section .left-sec .social-links a:active {
   section .left-sec h1 {
     font-size: 30px;
   }
+section .left-sec .social-links a:not(:last-child) {
+  margin-right: 17px;
+}
 }

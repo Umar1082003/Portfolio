@@ -1,12 +1,15 @@
 import { useEffect, useState } from "react";
 // components
 import Header from "./components/1-header/Header";
-import Hero from "./components/2-hero/Hero";
-import Content from "./components/3-content/Content";
-import Contact from "./components/4-contact/Contact";
-import Footer from "./components/5-footer/Footer";
 // icons
-import { IoIosArrowUp } from "react-icons/io";
+import { GoArrowUp } from "react-icons/go";
+import { BrowserRouter, Route, Routes } from "react-router";
+// pages
+import Projects from "./Pages/Projects";
+import Education from "./Pages/Education";
+import ContactUs from "./Pages/ContactUs";
+import Main from "./Pages/Main";
+import Skills from "./Pages/Skills";
 
 function App() {
   const [showScrollBtn, setShowScrollBtn] = useState(false);
@@ -20,7 +23,7 @@ function App() {
   // Effect to show/hide the scroll button based on scroll position
   useEffect(() => {
     window.addEventListener("scroll", () => {
-      if (window.scrollY > 400) {
+      if (window.scrollY > 200) {
         setShowScrollBtn(true);
       } else {
         setShowScrollBtn(false);
@@ -29,26 +32,30 @@ function App() {
   }, []);
 
   return (
-    <div className="main mx-auto">
-      <Header />
-      <Hero />
-      <div className="tline"></div>
-      <Content />
-      <div className="tline"></div>
-      <Contact />
-      <div className="tline"></div>
-      <Footer />
-      <div
-        style={{
-          opacity: showScrollBtn ? 1 : 0,
-          pointerEvents: showScrollBtn ? "auto" : "none",
-        }}
-        onClick={scrollToUpFn}
-        className="scrollToUp rounded-pill position-fixed"
-      >
-        <IoIosArrowUp />
+    <BrowserRouter basename={"/Portfolio/"}>
+      <div className="backdrop"></div>
+      <div className="main mx-auto">
+        <Header />
+
+        <Routes>
+          <Route path="/" element={<Main />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/skills" element={<Skills />} />
+          <Route path="/contact" element={<ContactUs />} />
+        </Routes>
+
+        <div
+          style={{
+            opacity: showScrollBtn ? 1 : 0,
+            pointerEvents: showScrollBtn ? "auto" : "none",
+          }}
+          onClick={scrollToUpFn}
+          className="scrollToUp rounded-pill position-fixed glass-card"
+        >
+          <GoArrowUp />
+        </div>
       </div>
-    </div>
+    </BrowserRouter>
   );
 }
 

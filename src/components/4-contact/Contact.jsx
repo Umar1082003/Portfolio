@@ -6,6 +6,8 @@ import "./contact.css";
 import Lottie from "lottie-react";
 import doneAnimation from "../../animations/done.json";
 import contactAnimation from "../../animations/contact.json";
+// framer-motion for animations
+import { motion } from "framer-motion";
 
 function Contact() {
   const FORM_ID = "mpwroere";
@@ -25,7 +27,12 @@ function Contact() {
   }
   
   return (
-    <div className="contact">
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1, delay: 0.2 }}
+      className="contact"
+    >
       <h1 className="fw-bold">
         <MdOutlineEmail className="text-white-50 mb-2 me-3" />
         Contact Us
@@ -66,7 +73,7 @@ function Contact() {
             errors={state.errors}
           />
           <button
-            className="btn btn-outline-dark text-light border-secondary my-3"
+            className="btn my-3 glass-card"
             type="submit"
             disabled={state.submitting}
             value="Submit"
@@ -81,7 +88,7 @@ function Contact() {
           />
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

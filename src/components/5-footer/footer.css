@@ -2,6 +2,7 @@ footer ul li a {
   font-size: 0.7rem;
   display: inline-block;
   transition: 0.3s;
+  color: var(--white-color) !important;
 }
 footer ul li a:hover {
   background: linear-gradient(90deg, var(--purpel), var(--pink)) !important;
@@ -14,13 +15,44 @@ footer p {
   font-size: 0.77rem;
 }
 body.light footer p {
-  color: var(--title) !important;
+  color: var(--white-color) !important;
 }
+.social-links-footer {
+  align-items: center;
+  width: 100%;
+}
+.social-links-footer a {
+  color: var(--subtitle) !important;
+}
+.social-links-footer a:hover {
+  color: var(--title) !important;
+  transform: scale(1.1);
+}
+.social-links-footer a {
+  color: var(--subtitle) !important;
+}
+.social-links-footer a:hover {
+  color: var(--title) !important;
+  transform: scale(1.1);
+}
+/* light mode */
+body.light .social-links-footer {
+  width: 100%;
+}
+body.light .social-links-footer a {
+  color: var(--white-color) !important;
+}
+body.light .social-links-footer a:hover {
+  color: #222224 !important;
+  transform: scale(1.3);
+}
+
 @media (max-width: 826px) {
   footer {
     flex-direction: column;
     align-items: center;
     text-align: center;
     gap: 1rem;
+    padding-top: 8px;
   }
 }

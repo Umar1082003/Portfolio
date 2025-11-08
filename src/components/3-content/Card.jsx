@@ -1,5 +1,6 @@
 import React from "react";
 import { FaArrowRight, FaLink, FaGithub } from "react-icons/fa";
+import { SiMui } from "react-icons/si";
 // framer-motion for animations
 import { AnimatePresence, motion } from "framer-motion";
 function Card({ projects }) {
@@ -8,12 +9,12 @@ function Card({ projects }) {
       {projects.map((item) => (
         <motion.div
           layout
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 80 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -50 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.9 }}
           key={item.id}
-          className="card mb-3 me-3"
+          className="card mb-3 me-3 glass-card"
         >
           <img
             src={item.img}
@@ -21,7 +22,16 @@ function Card({ projects }) {
             alt={item.title}
           />
           <div className="card-body">
-            <h5 className="card-title">{item.title}</h5>
+            <h5 className="card-title">
+              {item.title === "Admin Dashboard" ? (
+                <>
+                  Admin Dashboard{" "}
+                  <SiMui size={25} className="ms-2 text-primary" />
+                </>
+              ) : (
+                item.title
+              )}
+            </h5>
             <p className="card-text text-white-50">{item.description}</p>
             <div className="links d-flex justify-content-between">
               <a
