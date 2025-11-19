@@ -1,5 +1,5 @@
 import React from "react";
-import { FaArrowRight, FaLink, FaGithub } from "react-icons/fa";
+import { FaLink, FaGithub } from "react-icons/fa";
 import { SiMui } from "react-icons/si";
 // framer-motion for animations
 import { AnimatePresence, motion } from "framer-motion";
@@ -12,7 +12,7 @@ function Card({ projects }) {
           initial={{ opacity: 0, y: 80 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -50 }}
-          transition={{ duration: 0.9 }}
+          transition={{ duration: 0.7 }}
           key={item.id}
           className="card mb-3 me-3 glass-card"
         >

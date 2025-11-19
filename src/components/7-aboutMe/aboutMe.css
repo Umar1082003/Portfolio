@@ -1,0 +1,25 @@
+.aboutMe li {
+  color: var(--subtitle) !important;
+  font-size: 15px;
+}
+.aboutMe .img {
+  width: 40% !important;
+  margin: 0 auto;
+}
+
+@media (max-width: 992px) {
+  .img {
+    display: none;
+  }
+  .aboutMe p,
+  .aboutMe span,
+  .aboutMe li {
+    font-size: 13px;
+  }
+  .aboutMe h1 {
+    font-size: 25px;
+  }
+  .aboutMe h3 {
+    font-size: 14px;
+  }
+}

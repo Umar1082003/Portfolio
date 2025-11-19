@@ -35,7 +35,7 @@ function Contact() {
     >
       <h1 className="fw-bold">
         <MdOutlineEmail className="text-white-50 mb-2 me-3" />
-        Contact Us
+        Contact Me
       </h1>
       <p className="text-white-50">
         If you have any questions or feedback, feel free to reach out to me!

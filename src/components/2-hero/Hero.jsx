@@ -67,7 +67,7 @@ function Hero() {
             Always ready for the next challenge.
           </p>
           <div className="d-flex gap-3 flex-column flex-md-row align-items-md-center flex-wrap">
-            <div className="social-links my-4 glass-card p-2 px-md-3 px-5">
+            <div className="social-links my-4 glass-card p-2 px-md-5 px-5">
               {socialLinks.map((link, index) => (
                 <a
                   key={index}

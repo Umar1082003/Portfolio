@@ -41,7 +41,7 @@ function SkillsComponent() {
       transition={{ duration: 1 }}
     >
       <div className="tline"></div>
-      <h1 className="ms-4 mb-5 fw-bold">
+      <h1 className="mb-5 text-center text-lg-start fw-bold">
         <TbPointFilled className="mb-2" size={30} /> My Skills
       </h1>
       <ul className="d-flex flex-wrap justify-content-center gap-4 row-gap-5 list-unstyled mt-4">

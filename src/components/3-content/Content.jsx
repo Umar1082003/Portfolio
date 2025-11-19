@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "./content.css";
 import projects from "./Projects";
 import Card from "./Card";
-import { motion } from "framer-motion";
 
 
 // buttons for filtering projects by category
@@ -36,12 +35,7 @@ function Content() {
 
   return (
     <main className="d-flex">
-      <motion.section
-        layout
-        initial={{ opacity: 0, x: -80 }}
-        animate={{ opacity: 1, x: 0 }}
-        exit={{ opacity: 0, y: -50 }}
-        transition={{ duration: 0.9 }}
+      <section
         className="slide-sec border-end-0 col-lg-3 col-md-5 pe-sm-0 border-end-sm-0 pe-md-3 pe-5"
       >
         {categories.map((cat) => (
@@ -57,7 +51,7 @@ function Content() {
             {cat.label}
           </button>
         ))}
-      </motion.section>
+      </section>
       <section className="content-sec col-lg-9 col-md-7 ms-5 d-flex flex-wrap justify-content-center">
         <Card projects={filteredProjects} />
       </section>
