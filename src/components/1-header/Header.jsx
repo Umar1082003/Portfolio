@@ -3,16 +3,18 @@ import { IoClose } from "react-icons/io5";
 import { TiThMenu } from "react-icons/ti";
 import { MdOutlineLightMode } from "react-icons/md";
 import { IoMoon } from "react-icons/io5";
-import "./header.css";
 // framer-motion for animations
 import { motion } from "framer-motion";
 import { Link, NavLink, useLocation } from "react-router-dom";
+
+import "./header.css";
 
 const navLinks = [
   { name: "About", path: "/" },
   { name: "Projects", path: "/projects" },
   { name: "Skills", path: "/skills" },
   { name: "Contact", path: "/contact" },
+  // { name: "Hire Me", path: "/contact" },
 ];
 
 function Header() {
@@ -32,12 +34,13 @@ function Header() {
   }, [theme]);
 
   useEffect(() => {
-      setPopUp(false);
-          window.scrollTo({
-            top: 0,
-            behavior: "smooth",
-          });
+    setPopUp(false);
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   }, [location]);
+
 
   return (
     <motion.header
@@ -67,17 +70,25 @@ function Header() {
         </ul>
       </nav>
 
-      {/* light&dark button */}
-      <button
-        onClick={handleDarkLight}
-        className="text-light p-2 lh-1 rounded-pill glass-card"
-      >
-        {theme === "dark" ? (
-          <IoMoon className="fs-5" />
-        ) : (
-          <MdOutlineLightMode className="fs-5" />
-        )}
-      </button>
+      {/* light&dark & hire me buttons */}
+      <div className="d-flex align-items-center gap-2">
+        <Link
+          to={"./contact"}
+          className="px-3 py-2 lh-1 rounded-pill glass-card"
+        >
+          Hire Me
+        </Link>
+        <button
+          onClick={handleDarkLight}
+          className="text-light p-2 lh-1 rounded-pill glass-card"
+        >
+          {theme === "dark" ? (
+            <IoMoon className="fs-5" />
+          ) : (
+            <MdOutlineLightMode className="fs-5" />
+          )}
+        </button>
+      </div>
 
       {/* pop up menu */}
       {popUp && (

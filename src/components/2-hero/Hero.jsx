@@ -1,19 +1,19 @@
-import React from "react";
-import { FaXTwitter } from "react-icons/fa6";
-import { FaInstagram, FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaInstagram, FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 import { VscVerifiedFilled } from "react-icons/vsc";
 import { HiOutlineDownload } from "react-icons/hi";
 // animation
 import Lottie from "lottie-react";
-import devAnimation from "../../animations/dev.json";
+import devAnimation from "../../animations/Playground Animation.json";
 // framer-motion for animations
 import { motion } from "framer-motion";
 
+import CV from "/public/assets/Omar-Abdelwahab-Sayed-CV.pdf";
+
+
 import "./hero.css";
-import CV from "/public/assets/Omar-Abdelwahab-Sayed.pdf";
 
 const socialLinks = [
-  { href: "https://x.com/OMAR80942659", icon: <FaXTwitter /> },
+  { href: "https://wa.me/01009175260", icon: <FaWhatsapp /> },
   {
     href: "https://www.instagram.com/umarabdelwahabsayed/",
     icon: <FaInstagram />,
@@ -54,17 +54,17 @@ function Hero() {
           className="text mt-4"
         >
           <h1 className="my-4 fw-bold">
-            Self-Taught <span>Front-End Developer</span>, with a passion for
-            growth and innovation
+            <span>Front-End Developer</span>, Focused on Performance,
+            Scalability & User Experience
           </h1>
           <p className="my-4">
-            I’m a self-taught front-end developer who learned everything from
-            scratch at home through YouTube. I’ve already built several
-            projects. I’m deeply passionate about learning and constantly
-            improving myself — not just as a developer, but as a person. My
-            dream is to work in global tech environments, where I can grow,
-            contribute, and make an impact. Fast learner. Highly motivated.
-            Always ready for the next challenge.
+            Front-End Developer with hands-on experience building scalable and
+            user-focused web applications using modern technologies. I
+            specialize in creating clean, maintainable code and responsive
+            interfaces that deliver smooth user experiences. Passionate about
+            continuous growth, problem-solving, and contributing to impactful
+            projects in global tech environments. Fast learner. Detail-oriented.
+            Always ready for new challenges.
           </p>
           <div className="d-flex gap-3 flex-column flex-md-row align-items-md-center flex-wrap">
             <div className="social-links my-4 glass-card p-2 px-md-5 px-5">

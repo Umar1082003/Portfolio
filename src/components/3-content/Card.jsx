@@ -20,6 +20,7 @@ function Card({ projects }) {
             src={item.img}
             className="card-img-top rounded"
             alt={item.title}
+            lazy="loading"
           />
           <div className="card-body">
             <h5 className="card-title">

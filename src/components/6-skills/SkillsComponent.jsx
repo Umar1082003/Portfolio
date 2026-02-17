@@ -1,8 +1,10 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { FaHtml5, FaReact, FaBootstrap, FaGithub } from "react-icons/fa";
 import { IoLogoCss3 } from "react-icons/io5";
 import { SiMui, SiRedux } from "react-icons/si";
 import { IoLogoJavascript } from "react-icons/io5";
+import { SiTypescript } from "react-icons/si";
+import { RiTailwindCssFill } from "react-icons/ri";
 import { TbBrandFramerMotion } from "react-icons/tb";
 import { SiReactrouter, SiAxios } from "react-icons/si";
 import { TbPointFilled } from "react-icons/tb";
@@ -16,11 +18,13 @@ const icons = [
   { icon: <FaHtml5 size={iconSize} />, name: "HTML5" },
   { icon: <IoLogoCss3 size={iconSize} />, name: "CSS3" },
   { icon: <IoLogoJavascript size={iconSize} />, name: "JavaScript" },
+  { icon: <SiTypescript size={iconSize} />, name: "TypeScript" },
   { icon: <FaReact size={iconSize} />, name: "ReactJS" },
   { icon: <SiRedux size={iconSize} />, name: "Redux" },
   { icon: <SiReactrouter size={iconSize} />, name: "React Router" },
-  { icon: <SiMui size={iconSize} />, name: "Material-UI" },
+  { icon: <RiTailwindCssFill size={iconSize} />, name: "TailwindCSS" },
   { icon: <FaBootstrap size={iconSize} />, name: "Bootstrap" },
+  { icon: <SiMui size={iconSize} />, name: "Material-UI" },
   { icon: <TbBrandFramerMotion size={iconSize} />, name: "Framer Motion" },
   { icon: <FaGithub size={iconSize} />, name: "GitHub" },
   { icon: <SiAxios size={iconSize} />, name: "Axios" },
@@ -29,7 +33,7 @@ const icons = [
 function SkillsComponent() {
   useEffect(() => {
     const tooltipTriggerList = document.querySelectorAll(
-      '[data-bs-toggle="tooltip"]'
+      '[data-bs-toggle="tooltip"]',
     );
     [...tooltipTriggerList].map((el) => new Tooltip(el));
   }, []);
@@ -41,12 +45,12 @@ function SkillsComponent() {
       transition={{ duration: 1 }}
     >
       <div className="tline"></div>
-      <h1 className="mb-5 text-center text-lg-start fw-bold">
+      <h1 className="glass-card mb-5 p-3 w-100 text-center fw-bold">
         <TbPointFilled className="mb-2" size={30} /> My Skills
       </h1>
       <ul className="d-flex flex-wrap justify-content-center gap-4 row-gap-5 list-unstyled mt-4">
         {icons.map((item, index) => (
-          <li className="glass-card" key={index}>
+          <li className="glass-card customHover" key={index}>
             <button
               data-bs-toggle="tooltip"
               data-bs-placement="top"

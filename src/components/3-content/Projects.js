@@ -2,7 +2,7 @@ const projects = [
   {
     id: 2,
     title: "React E-commerce Website",
-    img: "/Portfolio/assets/e-commerce.png",
+    img: "/Portfolio/assets/ecommerce.png",
     category: ["react&MUI"],
     link: "https://github.com/Umar1082003/E-commerce",
     demo: "https://umar1082003.github.io/E-commerce",
@@ -28,6 +28,26 @@ const projects = [
     demo: "https://umar1082003.github.io/Skywings/",
     description:
       "A travel website built using HTML and CSS. It features a responsive design with a clean layout and modern styling. The app uses CSS Flexbox and Grid for the layout and styling.",
+  },
+  {
+    id: 7,
+    title: "Prayer Times",
+    img: "/Portfolio/assets/prayerTimes.png",
+    category: ["react&MUI"],
+    link: "https://github.com/Umar1082003/Prayer-App",
+    demo: "https://umar1082003.github.io/Prayer-App/",
+    description:
+      "A simple prayer times app built with ReactJS. It allows users to view prayer times for their location. The app uses the Aladhan API to fetch prayer times and display them in a user-friendly interface.",
+  },
+  {
+    id: 4,
+    title: "Recipe Finder App",
+    img: "/Portfolio/assets/recipeApp.png",
+    category: ["JS"],
+    link: "https://github.com/Umar1082003/Recipe-App",
+    demo: "https://umar1082003.github.io/Recipe-App/",
+    description:
+      "A simple recipe app built with JavaScript. It allows users to search for recipes by ingredients. The app uses the Edamam API to fetch recipes and display them in a user-friendly interface. The app is responsive and works well on mobile devices.",
   },
   {
     id: 9,
@@ -59,16 +79,7 @@ const projects = [
     description:
       "landing page built using HTML, CSS, and JavaScript. It features a responsive design. JavaScript adds some interactivity.",
   },
-  {
-    id: 4,
-    title: "Recipe Finder App",
-    img: "/Portfolio/assets/recipeApp.png",
-    category: ["JS"],
-    link: "https://github.com/Umar1082003/Recipe-App",
-    demo: "https://umar1082003.github.io/Recipe-App/",
-    description:
-      "A simple recipe app built with JavaScript. It allows users to search for recipes by ingredients. The app uses the Edamam API to fetch recipes and display them in a user-friendly interface. The app is responsive and works well on mobile devices.",
-  },
+
   {
     id: 5,
     title: "Smart To-Do-List App",
@@ -78,16 +89,6 @@ const projects = [
     demo: "https://umar1082003.github.io/To-Do-List/",
     description:
       "To-Do List app built with JavaScript. It allows users to add, delete, edit, and mark tasks as completed. The app uses local storage to save tasks. The user interface is clean and intuitive.",
-  },
-  {
-    id: 7,
-    title: "Prayer Times",
-    img: "/Portfolio/assets/prayerTimes.png",
-    category: ["react&MUI"],
-    link: "https://github.com/Umar1082003/Prayer-App",
-    demo: "https://umar1082003.github.io/Prayer-App/",
-    description:
-      "A simple prayer times app built with ReactJS. It allows users to view prayer times for their location. The app uses the Aladhan API to fetch prayer times and display them in a user-friendly interface.",
   },
 ];
 export default projects;

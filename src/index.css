@@ -31,6 +31,7 @@ html {
 
 body.dark {
   background-color: var(--bg-color) !important;
+  /* background-color: #0e122e !important; */
   color: var(--white-color) !important;
 }
 body.light {
@@ -45,7 +46,7 @@ body.light {
     #c25dba81,
     #9a9a9a,
     #3f16c476
-  );
+    );
 }
 .backdrop {
   width: 100%;
@@ -80,7 +81,7 @@ body.light .glass-card {
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   border-radius: 20px;
-  border: 1px solid rgba(103, 103, 103, 0.3);
+  border: 1px solid rgba(103, 103, 103, 0.1);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.19),
     inset 0 1px 0 rgba(255, 255, 255, 0.5),
     inset 0 -1px 0 rgba(255, 255, 255, 0.1),
@@ -98,6 +99,7 @@ body.light .glass-card {
   padding: 0 4rem !important;
 }
 body.dark .main {
+  /* background: linear-gradient(160deg, #18181bb8, #0c00b463); */
   background-color: var(--container-bg-color);
   border: 2px solid var(--border-color);
 }

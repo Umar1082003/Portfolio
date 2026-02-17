@@ -32,12 +32,13 @@ body.light main .slide-sec button.active {
   pointer-events: none;
 }
 body.light main .slide-sec button.active {
-  color: #212529 !important;
+  color: #565363 !important;
 }
 
 /* card */
 main .content-sec .card {
   width: 15rem;
+  border: 1px solid var(--border-color);
 }
 main .content-sec .card img {
   filter: brightness(0.9);

@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import "./content.css";
 import projects from "./Projects";
 import Card from "./Card";
 
+import "./content.css";
 
 // buttons for filtering projects by category
 const categories = [

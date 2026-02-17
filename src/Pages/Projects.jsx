@@ -6,9 +6,11 @@ function Projects() {
   return (
     <div>
       <div className="tline my-5"></div>
-      <h1 className="mb-5 text-center text-lg-start fw-bold"><FaDiagramProject size={30}/> My Projects</h1>
+      <h1 className="glass-card mb-5 p-3 w-100 text-center fw-bold">
+        <FaDiagramProject size={30} /> My Projects
+      </h1>
 
-      <Content/>
+      <Content />
       <div className="tline"></div>
       <FooterLinks />
     </div>
