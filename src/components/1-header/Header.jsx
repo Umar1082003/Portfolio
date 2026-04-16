@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { IoClose } from "react-icons/io5";
+import { Link, NavLink, useLocation } from "react-router-dom";
+// react icons
+import { IoClose, IoMoon } from "react-icons/io5";
 import { TiThMenu } from "react-icons/ti";
 import { MdOutlineLightMode } from "react-icons/md";
-import { IoMoon } from "react-icons/io5";
 // framer-motion for animations
 import { motion } from "framer-motion";
-import { Link, NavLink, useLocation } from "react-router-dom";
 
 import "./header.css";
 
@@ -14,7 +14,6 @@ const navLinks = [
   { name: "Projects", path: "/projects" },
   { name: "Skills", path: "/skills" },
   { name: "Contact", path: "/contact" },
-  // { name: "Hire Me", path: "/contact" },
 ];
 
 function Header() {
@@ -30,7 +29,7 @@ function Header() {
 
   useEffect(() => {
     localStorage.setItem("currentTheme", theme);
-    document.body.className = theme; // Apply the theme to the body class
+    document.body.className = theme;
   }, [theme]);
 
   useEffect(() => {
@@ -41,7 +40,6 @@ function Header() {
     });
   }, [location]);
 
-
   return (
     <motion.header
       initial={{ opacity: 0, y: -50 }}
@@ -49,16 +47,16 @@ function Header() {
       transition={{ duration: 0.5 }}
       className="pt-3 d-flex align-items-center justify-content-between"
     >
-      {/* menu icon */}
-      <div
-        className="menu p-2 lh-1 rounded-pill glass-card"
-        onClick={() => {
-          setPopUp(true);
-        }}
-      >
-        <TiThMenu className="fs-5" />
-      </div>
-
+        {/* menu icon */}
+        <div
+          className="menu p-2 lh-1 rounded-pill glass-card"
+          onClick={() => {
+            setPopUp(true);
+          }}
+        >
+          <TiThMenu className="fs-5" />
+        </div>
+        
       {/* navlist */}
       <nav className="glass-card">
         <ul className="d-flex gap-4 py-1 px-3 m-0">

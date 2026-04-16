@@ -12,8 +12,7 @@ dist
 dist-ssr
 *.local
 hiddenProjects.js
-test.txt
-Education.jsx
+
 
 # Editor directories and files
 .vscode/*

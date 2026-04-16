@@ -18,10 +18,7 @@ section .left-sec h1 span {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-section .left-sec p {
-  color: var(--white-color);
-  font-size: 15px;
-}
+
 section .left-sec .social-links a {
   color: var(--subtitle) !important;
   font-size: 21px;

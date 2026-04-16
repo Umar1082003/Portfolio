@@ -5,7 +5,7 @@
 }
 
 .custom-tooltip {
-  --bs-tooltip-bg: #222224;
+  --bs-tooltip-bg: #ffffff17 !important;
   --bs-tooltip-color: var(--title);
 }
 body.light .custom-tooltip {

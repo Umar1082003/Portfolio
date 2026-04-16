@@ -57,15 +57,6 @@ function Hero() {
             <span>Front-End Developer</span>, Focused on Performance,
             Scalability & User Experience
           </h1>
-          <p className="my-4">
-            Front-End Developer with hands-on experience building scalable and
-            user-focused web applications using modern technologies. I
-            specialize in creating clean, maintainable code and responsive
-            interfaces that deliver smooth user experiences. Passionate about
-            continuous growth, problem-solving, and contributing to impactful
-            projects in global tech environments. Fast learner. Detail-oriented.
-            Always ready for new challenges.
-          </p>
           <div className="d-flex gap-3 flex-column flex-md-row align-items-md-center flex-wrap">
             <div className="social-links my-4 glass-card p-2 px-md-5 px-5">
               {socialLinks.map((link, index) => (

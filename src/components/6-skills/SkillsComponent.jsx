@@ -1,42 +1,27 @@
 import { useEffect } from "react";
-import { FaHtml5, FaReact, FaBootstrap, FaGithub } from "react-icons/fa";
-import { IoLogoCss3 } from "react-icons/io5";
-import { SiMui, SiRedux } from "react-icons/si";
-import { IoLogoJavascript } from "react-icons/io5";
-import { SiTypescript } from "react-icons/si";
-import { RiTailwindCssFill } from "react-icons/ri";
-import { TbBrandFramerMotion } from "react-icons/tb";
-import { SiReactrouter, SiAxios } from "react-icons/si";
+import { useLocation, useNavigate } from "react-router";
+
 import { TbPointFilled } from "react-icons/tb";
+import { GrFormNextLink } from "react-icons/gr";
 import { motion } from "framer-motion";
 import { Tooltip } from "bootstrap";
 
+import HeaderPage from "../8-HeaderPage/HeaderPage";
+
+import { icons } from "./Icons";
+
 import "./skills.css";
-
-const iconSize = 85.45;
-const icons = [
-  { icon: <FaHtml5 size={iconSize} />, name: "HTML5" },
-  { icon: <IoLogoCss3 size={iconSize} />, name: "CSS3" },
-  { icon: <IoLogoJavascript size={iconSize} />, name: "JavaScript" },
-  { icon: <SiTypescript size={iconSize} />, name: "TypeScript" },
-  { icon: <FaReact size={iconSize} />, name: "ReactJS" },
-  { icon: <SiRedux size={iconSize} />, name: "Redux" },
-  { icon: <SiReactrouter size={iconSize} />, name: "React Router" },
-  { icon: <RiTailwindCssFill size={iconSize} />, name: "TailwindCSS" },
-  { icon: <FaBootstrap size={iconSize} />, name: "Bootstrap" },
-  { icon: <SiMui size={iconSize} />, name: "Material-UI" },
-  { icon: <TbBrandFramerMotion size={iconSize} />, name: "Framer Motion" },
-  { icon: <FaGithub size={iconSize} />, name: "GitHub" },
-  { icon: <SiAxios size={iconSize} />, name: "Axios" },
-];
-
 function SkillsComponent() {
+  const location = useLocation();
+  const navigate = useNavigate();
   useEffect(() => {
     const tooltipTriggerList = document.querySelectorAll(
       '[data-bs-toggle="tooltip"]',
     );
     [...tooltipTriggerList].map((el) => new Tooltip(el));
   }, []);
+
+  const filteredIcons = location.pathname === "/" ? icons.slice(0, 3) : icons;
 
   return (
     <motion.div
@@ -45,11 +30,9 @@ function SkillsComponent() {
       transition={{ duration: 1 }}
     >
       <div className="tline"></div>
-      <h1 className="glass-card mb-5 p-3 w-100 text-center fw-bold">
-        <TbPointFilled className="mb-2" size={30} /> My Skills
-      </h1>
+      <HeaderPage title={"My Skills"} icon={<TbPointFilled size={30} />} />
       <ul className="d-flex flex-wrap justify-content-center gap-4 row-gap-5 list-unstyled mt-4">
-        {icons.map((item, index) => (
+        {filteredIcons.map((item, index) => (
           <li className="glass-card customHover" key={index}>
             <button
               data-bs-toggle="tooltip"
@@ -62,6 +45,15 @@ function SkillsComponent() {
             </button>
           </li>
         ))}
+        {location.pathname === "/" && (
+          <li
+            className="d-flex align-items-center px-2 glass-card customHover"
+            onClick={() => navigate("/Skills")}
+          >
+            <button>Show All</button>
+            <GrFormNextLink />
+          </li>
+        )}
       </ul>
     </motion.div>
   );

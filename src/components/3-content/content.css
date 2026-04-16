@@ -1,44 +1,41 @@
 main button {
   user-select: none;
 }
-main .slide-sec {
-  border-color: var(--border-color) !important;
-  /* width: fit-content; */
-}
 
 /* buttons */
 main .slide-sec button {
-  color: #ffffff !important;
   background: rgba(255, 255, 255, 0.05);
   border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid #1e293b;
+  padding: 8px 20px !important;
+  margin-right: 20px !important;
 }
 main .slide-sec button:hover {
-  background-color: #21252984 !important;
+  background-color: #1526394d !important;
 }
 main .slide-sec button:active {
   scale: 0.95;
-}
-body.light main .slide-sec button {
-  color: var(--white-color) !important;
 }
 body.light main .slide-sec button:hover {
   background: rgb(255, 255, 255, 0.2) !important;
 }
 main .slide-sec button.active,
 body.light main .slide-sec button.active {
-  border: 2px solid;
-  background-color: transparent !important;
+  border: 1px solid rgb(0, 0, 96) !important;
+  background-color: rgba(0, 0, 96, 0.250) !important;
   pointer-events: none;
 }
 body.light main .slide-sec button.active {
   color: #565363 !important;
+    border: 1px solid rgba(0, 0, 96, 0.57) !important;
+  background-color: rgba(0, 0, 96, 0.108) !important;
 }
 
 /* card */
 main .content-sec .card {
-  width: 15rem;
+  width: 18rem;
   border: 1px solid var(--border-color);
+  margin-left: 35px !important;
 }
 main .content-sec .card img {
   filter: brightness(0.9);
@@ -66,7 +63,6 @@ main .content-sec .card .card-body p {
 /* dark-mode */
 body.dark main .content-sec .card {
   color: var(--title);
-  background: rgba(255, 255, 255, 0.05);
   border-radius: 20px;
   border: 3px solid var(--border-color);
 }
@@ -78,7 +74,7 @@ body.dark main .content-sec .card .card-body a {
   color: var(--subtitle) !important;
 }
 body.dark main .content-sec .card .card-body a:hover {
-  color: var(--purpel) !important;
+  color: rgb(0, 0, 96) !important;
 }
 /* light-mode */
 body.light main .content-sec .card:hover {
@@ -108,16 +104,13 @@ body.light main .content-sec .card .card-body a:hover {
     text-align: center;
     padding: 0 !important;
   }
-  main .slide-sec button {
-    /* width: 70% !important; */
-    width: 100%;
-    max-width: 300px;
-    margin: auto;
-  }
+main .slide-sec button {
+  width: fit-content !important;
+}
   main .content-sec {
     margin-left: 0 !important;
   }
   main .content-sec .card {
-    margin-right: 0 !important;
+    margin-left: 0 !important;
   }
 }

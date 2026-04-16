@@ -10,6 +10,7 @@
   outline: none;
   border: 2px solid var(--border-color) !important;
   width: auto;
+  background-color: transparent !important;
 } 
 .contact form input:focus,
 .contact form textarea:focus {
@@ -23,11 +24,10 @@
 }
 .contact form button{
   width: auto !important;
-  background-color: #212529 !important;
   color: #fff;
 }
 .contact form button:hover{
-  background-color: #212529af !important;
+  background-color: var(--border-color) !important;
 }
 .contact form button:hover,
 body.light .contact form button:hover{

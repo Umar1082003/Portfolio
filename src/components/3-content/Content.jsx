@@ -1,21 +1,24 @@
-import React, { useState } from "react";
-import projects from "./Projects";
+import { useState } from "react";
+import { useLocation } from "react-router";
+
 import Card from "./Card";
+import SlideSec from "./SlideSec";
+import projects from "../../data/Projects";
 
 import "./content.css";
-
 // buttons for filtering projects by category
 const categories = [
-  { label: "All Projects", value: "all" },
-  { label: "HTML & CSS", value: "CSS" },
-  { label: "JavaScript", value: "JS" },
   { label: "ReactJS & MUI", value: "react&MUI" },
-  // { label: "Bootstrap", value: "bootstrap" },
+  { label: "JavaScript", value: "JS" },
+  { label: "HTML & CSS", value: "CSS" },
+  { label: "View All Projects", value: "all" },
 ];
 
 function Content() {
-  const [active, setActive] = useState("all");
+  const location = useLocation();
+  const [active, setActive] = useState("react&MUI");
   const [filteredProjects, setFilteredProjects] = useState(projects);
+  console.log(filteredProjects);
 
   // Function to handle the click event for the "All Projects" button
   const handleClick = (buttonCategory) => {
@@ -30,30 +33,22 @@ function Content() {
             });
             return newItem === buttonCategory;
           });
+    console.log(projects);
+
     setFilteredProjects(newArr);
   };
 
   return (
-    <main className="d-flex">
-      <section
-        className="slide-sec border-end-0 col-lg-3 col-md-5 pe-sm-0 border-end-sm-0 pe-md-3 pe-5"
-      >
-        {categories.map((cat) => (
-          <button
-            key={cat.value}
-            onClick={() => {
-              handleClick(cat.value);
-            }}
-            className={`${
-              active === cat.value ? "active" : ""
-            } btn text-light my-3 w-100 glass-card`}
-          >
-            {cat.label}
-          </button>
-        ))}
-      </section>
-      <section className="content-sec col-lg-9 col-md-7 ms-5 d-flex flex-wrap justify-content-center">
-        <Card projects={filteredProjects} />
+    <main className="d-flex justify-content-center">
+      {location.pathname === "/" && (
+        <SlideSec
+          categories={categories}
+          active={active}
+          handleClick={handleClick}
+        />
+      )}
+      <section className="content-sec col-lg-9 col-md-7 d-flex flex-wrap justify-content-center">
+        <Card filteredProjects={filteredProjects} projects={projects} />
       </section>
     </main>
   );

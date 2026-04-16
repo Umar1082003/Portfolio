@@ -1,12 +1,11 @@
 import { useEffect, useState } from "react";
+import { BrowserRouter, Route, Routes } from "react-router";
 // components
 import Header from "./components/1-header/Header";
 // icons
 import { GoArrowUp } from "react-icons/go";
-import { BrowserRouter, Route, Routes } from "react-router";
 // pages
 import Projects from "./Pages/Projects";
-// import Education from "./Pages/Education";
 import ContactUs from "./Pages/ContactUs";
 import Main from "./Pages/Main";
 import Skills from "./Pages/Skills";
@@ -44,6 +43,7 @@ function App() {
           <Route path="/contact" element={<ContactUs />} />
         </Routes>
 
+        {/* scrollToUp */}
         <div
           style={{
             opacity: showScrollBtn ? 1 : 0,
